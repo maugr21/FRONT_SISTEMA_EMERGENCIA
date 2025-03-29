@@ -28,7 +28,8 @@ function App() {
       <div style={{ display: 'flex', width: '100vw', height: '100vh' }}>
         <div style={{ backgroundColor: 'white', width: '50%', padding: '10px', textAlign: 'center', color: 'black', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
           {/* Mapa de Google */}
-          <LoadScript googleMapsApiKey="AIzaSyCVsRlR5VTqqjgKXxla8Hi7qODLSp5JFbo">
+          <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
+
             <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
               {/* Puedes agregar marcadores u otros elementos aquí */}
             </GoogleMap>
